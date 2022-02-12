@@ -37,18 +37,16 @@ class App extends Component {
     ]
   }
 
-  render() {
+   render() {
     return (
       <div id="main">
         <ol>
-          {this.cityList.filter( (city)=>city.country=='India').map( (city,index)=>{
-            const key = `location${index + 1}`
-            return <li key={key}>{city.name}</li>;
+          {this.tempArr.map((element, index) => {
+            return <li key={`location${index + 1}`}>{element.name}</li>;
           })}
         </ol>
-        
       </div>
-    )
+    );
   }
 }
 
